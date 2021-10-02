@@ -1,0 +1,23 @@
+GET http://127.0.0.1:5000/messages HTTP/1.1
+
+###
+
+POST http://127.0.0.1:5000/messages
+Content-Type: application/json
+
+{
+    "message": "add message from server post method",
+    "author": "auth_add@gmail.com"
+}
+
+###
+PATCH http://127.0.0.1:5000/messages/23065459-0f26-4fc3-86ff-b43805b59477
+Content-Type: application/json
+
+{
+    "message": "rewrite message from server patch method",
+    "author": "auth_update@gmail.com"
+}
+
+###
+DELETE  http://127.0.0.1:5000/messages/da3e19bc-ed1f-40d6-89a0-9b5abceb323f
