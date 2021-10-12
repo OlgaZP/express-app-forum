@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 app.get('/messages', messageController.getMessages);
 
 //POST-add message
-app.post('/messages', messageController.addMessage);
+app.post('/messages', validate.validateMessage, messageController.addMessage);
 
 //PATCH
 app.patch('/messages/:id', messageController.updateMessage);
